@@ -1,14 +1,14 @@
 import os
 fo = open("./test.csv", "w+")
-print "Name of the file: ", fo.name
-print "Closed or not : ", fo.closed
-print "Opening mode : ", fo.mode
-print "Softspace flag : ", fo.softspace
-print "read: ", os.getcwd()
-fo = open("foo.txt", "wb")
-fo.write( "Python is a great language.\nYeah its great!!\n");
+# print "Name of the file: ", fo.name
+# print "Closed or not : ", fo.closed
+# print "Opening mode : ", fo.mode
+# print "Softspace flag : ", fo.softspace
+# print "read: ", os.getcwd()
+# fo = open("foo.txt", "wb")
+# fo.write( "Python is a great language. Yeah its great!!");
 # Close opend file
-fo.close()
+# fo.close()
 
 with open('foo.txt', 'a') as file:
     file.seek(0)
@@ -27,4 +27,9 @@ def stringifyCsv():
         data=myfile.read()
     return data
 
-print stringifyCsv()
+def findMax():
+    files = ["logs-2018-10-14-00.csv","logs-2018-10-14-01.csv","logs-2018-11-14-01.csv"]
+    print(max(files))
+
+# print stringifyCsv()
+findMax()
